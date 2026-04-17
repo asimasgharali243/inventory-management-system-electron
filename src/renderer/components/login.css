@@ -1,0 +1,339 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Dark overlay for better text readability when background image is present */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85), rgba(118, 75, 162, 0.85));
+    z-index: 0;
+    pointer-events: none;
+}
+
+.login-box {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.6s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo/Brand Section */
+.login-brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand-icon {
+    margin-bottom: 5px;
+}
+
+.brand-icon img {
+    width: 60px;
+    height: 20px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.brand-icon img:hover {
+    transform: scale(1.05);
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brand-tagline {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.brand-tagline a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.brand-tagline a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px;
+}
+
+.welcome-subtext {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: -10px !important;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.form-label.focused {
+    color: #667eea;
+}
+
+.label-icon {
+    font-size: 16px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-wrapper input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-wrapper input:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.clear-button,
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    transition: color 0.3s ease;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-button:hover,
+.toggle-password:hover {
+    color: #667eea;
+}
+
+.field-hint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+/* Remember Me Checkbox */
+.remember-group {
+    margin-bottom: 25px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+.checkbox-label input {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.login-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-button.loading {
+    cursor: wait;
+}
+
+.button-icon {
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.login-button:hover:not(:disabled) .button-icon {
+    transform: translateX(5px);
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Login Footer */
+.login-footer {
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.company-info {
+    font-size: 12px;
+    color: #666;
+    margin: 0 0 5px;
+}
+
+.company-info a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.company-info a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 11px;
+    color: #999;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .brand-name {
+        font-size: 24px;
+    }
+
+    .welcome-text {
+        font-size: 20px;
+    }
+}
+
+/* Full width rectangle logo */
+.brand-icon-inner {
+    width: 100%;
+    height: 100px;
+    background-image: url('../assets/logo-Image.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

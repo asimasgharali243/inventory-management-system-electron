@@ -1,0 +1,60 @@
+{
+  "name": "inventory-management-system",
+  "productName": "inventory-management-system",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": ".webpack/main",
+  "private": true,
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "IT",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.1",
+    "@electron-forge/maker-deb": "^7.11.1",
+    "@electron-forge/maker-rpm": "^7.11.1",
+    "@electron-forge/maker-squirrel": "^7.11.1",
+    "@electron-forge/maker-zip": "^7.11.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
+    "@electron-forge/plugin-fuses": "^7.11.1",
+    "@electron-forge/plugin-webpack": "^7.11.1",
+    "@electron/fuses": "^1.8.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "css-loader": "^6.11.0",
+    "electron": "41.1.1",
+    "node-loader": "^2.1.0",
+    "style-loader": "^3.3.4",
+    
+
+
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^9.2.1",
+    "electron-builder": "^24.13.3"
+   
+
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    
+      "better-sqlite3": "^12.8.0",
+    "chart.js": "^4.5.1",
+    "date-fns": "^2.30.0",
+    "papaparse": "^5.4.1",
+    "path": "^0.12.7",
+    "pdf-lib": "^1.17.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.14.0"
+  }
+}
